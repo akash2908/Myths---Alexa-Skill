@@ -13,6 +13,6 @@ Here is the link to it: [Myths](https://www.amazon.in/crazyboy2908-Myths/dp/B07J
  * Alexa, *Country Name* mythologies
 ## Files
 
- \- [lambda]()
+ \- [Lambda_Function](https://github.com/akash2908/Myths---Alexa-Skill/tree/master/Lambda_Function)
 
- \- [IntentSchema]()
+ \- [Interaction_Model](https://github.com/akash2908/Myths---Alexa-Skill/tree/master/Interaction_Model)
