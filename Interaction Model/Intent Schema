@@ -1,0 +1,288 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "cool myths",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": [
+                        "ask myths to open myths"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "abort",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "can you please help",
+                        "need some help",
+                        "help me out",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "cancel",
+                        "abort",
+                        "goodbye"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetNewFactIntent",
+                    "slots": [
+                        {
+                            "name": "Country_name",
+                            "type": "Country_name",
+                            "samples": [
+                                "ofcourse",
+                                "go on",
+                                "sure",
+                                "yup",
+                                "yes",
+                                "Yeah"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{Country_name}",
+                        "tell me {Country_name} myths",
+                        "I would love to know {Country_name} myths",
+                        "We want {Country_name} mythology",
+                        "I want {Country_name} mythology",
+                        "We want {Country_name} myths",
+                        "I want {Country_name} myths",
+                        "{Country_name} myth",
+                        "{Country_name} mythology",
+                        "{Country_name} myths",
+                        "from {Country_name}",
+                        "myths of {Country_name}",
+                        "a myth from {Country_name}",
+                        "tell me a myth from {Country_name}"
+                    ]
+                },
+                {
+                    "name": "Repeat",
+                    "slots": [
+                        {
+                            "name": "Country_name",
+                            "type": "Country_name",
+                            "samples": [
+                                "yes",
+                                "yeah",
+                                "yup",
+                                "sure",
+                                "go on",
+                                "ofcourses"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tell a myth from {Country_name}",
+                        "myth of {Country_name}",
+                        "myth from {Country_name}",
+                        "a myth of {Country_name}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Country_name",
+                    "values": [
+                        {
+                            "id": "1002",
+                            "name": {
+                                "value": "North America",
+                                "synonyms": [
+                                    "north America",
+                                    "North america",
+                                    "north america",
+                                    "North American"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1003",
+                            "name": {
+                                "value": "South America",
+                                "synonyms": [
+                                    "south America",
+                                    "South america",
+                                    "south america",
+                                    "South American"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1004",
+                            "name": {
+                                "value": "Greece",
+                                "synonyms": [
+                                    "greece",
+                                    "greek",
+                                    "Greek"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1005",
+                            "name": {
+                                "value": "Africa",
+                                "synonyms": [
+                                    "african",
+                                    "africa",
+                                    "African"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1006",
+                            "name": {
+                                "value": "Japan",
+                                "synonyms": [
+                                    "japanese",
+                                    "japan",
+                                    "Japanese"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1007",
+                            "name": {
+                                "value": "China",
+                                "synonyms": [
+                                    "chinese",
+                                    "china",
+                                    "Chinese"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1008",
+                            "name": {
+                                "value": "Rome",
+                                "synonyms": [
+                                    "rome"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1009",
+                            "name": {
+                                "value": "Egypt",
+                                "synonyms": [
+                                    "egypt",
+                                    "egyptian",
+                                    "Egyptian"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1001",
+                            "name": {
+                                "value": "India",
+                                "synonyms": [
+                                    "indian",
+                                    "india",
+                                    "Indian"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetNewFactIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Country_name",
+                            "type": "Country_name",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.1248612812378.518156212933",
+                                "elicitation": "Elicit.Slot.1248612812378.518156212933"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Repeat",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Country_name",
+                            "type": "Country_name",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1226987170108.1388884218155"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Slot.1248612812378.518156212933",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want {Country_name} mythology, right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1248612812378.518156212933",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "So, you want me to tell {Country_name} mythology, right?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Ok, you said {Country_name} mythology, right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1226987170108.1388884218155",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ok, you said {Country_name} mythology, right?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "So you want me to tell {Country_name} mythology, rignt?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1226987170108.1388884218155",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want {Country_name} mythology, right?"
+                    }
+                ]
+            }
+        ]
+    }
+}
